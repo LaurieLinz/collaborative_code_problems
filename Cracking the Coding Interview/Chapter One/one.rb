@@ -26,9 +26,27 @@ def is_isogram(candidate_string)
     return isogram
 end
 
+def simplified_is_isogram(candidate_string)
+    candidate_string = candidate_string.split("").sort
+    (0..candidate_string.length-1).each do |index|
+        if candidate_string[index] == candidate_string[index+1] 
+            return false
+        end
+    end
+    return true
+end
+
+
+def simplified_is_isogram2(candidate_string)
+    candidate_string.each_char { |char| return false if candidate_string.count(char) > 1 }
+    return true
+end
+
+
 puts "tests...."
 puts "#{unique_chars_in_string} #{is_isogram(unique_chars_in_string) ? 'is' : 'is not'} an isogram"
 puts "#{non_unique_chars_in_string} #{is_isogram(non_unique_chars_in_string) ? 'is' : 'is not'} an isogram"
+puts "#{unique_chars_in_string} #{simplified_is_isogram(unique_chars_in_string) ? 'is' : 'is not'} an isogram"
+puts "#{non_unique_chars_in_string} #{simplified_is_isogram(non_unique_chars_in_string) ? 'is' : 'is not'} an isogram"
 
-
-# What if you cannot use additional datastructures
+# What if you cannot use additional datastructures?
