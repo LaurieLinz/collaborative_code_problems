@@ -1,0 +1,31 @@
+// Write a function that takes an array A of length n and returns a boolean value to
+// indicate whether it is sorted in ascending order or not.
+
+// Write a function that takes in a HTML document and returns an array of all anchor
+// tags in the document.
+
+unsortedArray = [1, 4, 6, 3, 9, 11, 22, 4]
+sortedArray = unsortedArray.sort();
+
+
+
+assertTrue(null);
+
+
+function isSorted(array) {
+    return true;
+}
+
+
+function assertTrue(candidate) {
+    if (candidate !== true) {
+        throw new Error(candidate + " is not true");
+    }
+}
+
+
+
+
+
+
+
